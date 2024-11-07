@@ -1,8 +1,11 @@
 "use strict";
 // Write a TypeScript function sumArray that takes an array of numbers and returns the sum of all elements in the array
 // Sample Input:
-let sumArray = ([]) => {
+let sumArray = (arr) => {
+    let sum = arr.reduce((accumulator, cur) => accumulator + cur, 0);
+    // console.log(sum);
+    return sum;
 };
-sumArray([1, 2, 3, 4, 5]);
+console.log(sumArray([1, 2, 3, 4, 5]));
 // Sample Output:
-15;
+// 15;

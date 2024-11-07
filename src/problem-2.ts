@@ -1,7 +1,11 @@
-// Create a TypeScript function removeDuplicates that accepts an array of numbers and returns a new array with duplicates removed. Preserve the original order of elements.
+let removeDuplicates = (arr: number[]) => {
+  let newArr: number[] = [];
+  arr.forEach((each) => {
+    if (!newArr.includes(each)) {
+      newArr.push(each);
+    }
+  });
+  return newArr;
+};
 
-// Sample Input:
-removeDuplicates([1, 2, 2, 3, 4, 4, 5])[
-    // Sample Output:
-    (1, 2, 3, 4, 5)
-  ];
+console.log(removeDuplicates([1, 2, 2, 3, 4, 4, 5, 0, 10, 0, 0 , 10, 11]));
