@@ -1,4 +1,4 @@
-# Why are Type Guards Necessary? Discuss Various Types of Type Guards and Their Use Cases
+## Type Guards in TypeScript
 
 TypeScript enhances JavaScript by providing static types, enabling developers to catch errors at compile time rather than at runtime. However, in dynamic programming scenarios, we often work with union types or complex data structures where the type of a variable is uncertain at runtime. This is where **type guards** come in.
 
@@ -39,7 +39,6 @@ In this example, typeof value === "string" ensures value is treated as a string 
 instanceof is a type guard that checks if an object is an instance of a specific class. This is useful when dealing with class-based objects in TypeScript.
 
 ```typescript
-Copy code
 class Animal {
     speak() {
         console.log("Animal sound");
@@ -69,7 +68,6 @@ Custom type guards allow for more flexibility by checking specific properties or
 
 
 ```typescript
-Copy code
 type Bird = { fly: () => void };
 type Fish = { swim: () => void };
 
@@ -94,7 +92,6 @@ The in operator checks if a specified property exists within an object, making i
 
 
 ```typescript
-Copy code
 type Car = { drive: () => void };
 type Boat = { sail: () => void };
 
@@ -115,7 +112,6 @@ Discriminated unions are a type guard approach using a common property (usually 
 
 
 ```typescript
-Copy code
 type Circle = { shape: "circle"; radius: number };
 type Rectangle = { shape: "rectangle"; width: number; height: number };
 
@@ -142,7 +138,6 @@ Type guards are an invaluable feature in TypeScript, ensuring that variables hol
 Happy coding!
 
 ```python
-Copy code
 
 This blog post covers the necessity of type guards, explains various types of type guards with examples, and demonstrates when and how to use them effectively.
 ```
